@@ -1,8 +1,40 @@
-# Compiled class file
-*.class
+# Ignore Maven and Gradle build directories
+target/
+build/
 
-# Log file
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignore logs and temporary files
 *.log
+*.class
+*.tmp
+*.swp
+*.swo
+
+# Ignore operating system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore dependency directories (for Maven/Gradle)
+/.m2/
+/.gradle/
+
+# Ignore IDE specific directories and files
+.vscode/
+
+# Ignore Spring Boot specific files (if applicable)
+spring-boot-devtools/
+spring-boot-maven-plugin/
+
+# Ignore environment-specific files
+.env
+
+# Ignore JetBrains specific files (for shared codebases with IntelliJ IDEA)
+.idea_modules/
 
 # BlueJ files
 *.ctxt
