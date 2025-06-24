@@ -25,21 +25,31 @@
         <module>pet-clinic-data</module>
 		<module>pet-clinic-web</module>
 	</modules>
-    <scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
-	<dependencies>
 
-	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.13.2</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin </artifactId>
+				<configuration>
+					<goals>install</goals>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -71,4 +81,10 @@
 		</plugins>
 	</build>
 
+	<scm>
+		<connection>scm:git:https://github.com/DAVID-DARA/sfg-pet-clinic.git</connection>
+		<developerConnection>scm:git:git@github.com:DAVID-DARA/sfg-pet-clinic.git</developerConnection>
+		<url>https://github.com/DAVID-DARA/sfg-pet-clinic.git</url>
+		<tag>HEAD</tag>
+	</scm>
 </project>
